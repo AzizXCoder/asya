@@ -231,3 +231,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// === 12. LOGIKA KONEKSI EVENT INTERAKSI KONTEN BARU ===
+    // Fungsi ini dipasang secara global agar script module di HTML bisa memanggil fitur Like & Lightbox
+    window.bindNewCardEvents = function(cardElement) {
+        // Logika Like
+        const likeBtn = cardElement.querySelector('.like-btn');
+        if (likeBtn) {
+            likeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isLiked = likeBtn.getAttribute('data-liked') === 'true';
+                const countSpan = likeBtn.querySelector('.like-count');
+                let currentCount = parseInt(countSpan.textContent);
+                if (!isLiked) {
+                    likeBtn.setAttribute('data-liked', 'true');
+                    countSpan.textContent = currentCount + 1;
+                    createFloatingHearts(e.clientX, e.clientY);
+                } else {
+                    likeBtn.setAttribute('data-liked', 'false');
+                    countSpan.textContent = currentCount - 1;
+                }
+            });
+        }
+
+        // Logika Lightbox Zoom Gambar
+        const img = cardElement.querySelector('.clickable-img');
+        if (img) {
+            img.addEventListener('click', () => {
+                lightbox.classList.remove('hidden');
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        }
+    };
