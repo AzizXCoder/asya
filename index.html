@@ -187,7 +187,10 @@
         <p>&copy; 2026 Jurnal Estetik Si Tuan Putri. Dibuat dengan cinta, kopi, dan skill koding tingkat dewa. ✨</p>
     </footer>
     
-    <!-- INTEGRASI FIREBASE V12 MODULAR SDK & LOGIKA WEB -->
+    <!-- 1. PANGGIL SCRIPT UTAMA SEBAGAI DEFER (Biar jalan pas HTML siap) -->
+    <script src="script.js" defer></script>
+
+    <!-- 2. INTEGRASI FIREBASE V12 MODULAR SDK -->
     <script type="module">
         // Import module dari Firebase CDN resmi
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
@@ -244,10 +247,8 @@
                         return;
                     }
 
-                    // Push data ke table 'cards' Firebase Cloud
                     push(ref(db, 'cards'), { loc, img, highlight, story, category });
 
-                    // Reset Input
                     document.getElementById('newCardLoc').value = '';
                     document.getElementById('newCardImg').value = '';
                     document.getElementById('newCardHighlight').value = '';
@@ -267,10 +268,8 @@
                         return;
                     }
 
-                    // Push data ke table 'thoughts' Firebase Cloud
                     push(ref(db, 'thoughts'), { text, meta });
 
-                    // Reset Input
                     document.getElementById('newThoughtText').value = '';
                     document.getElementById('newThoughtMeta').value = '';
                     alert('Isi pikiran acak berhasil disimpan ke Cloud! 🧠💭');
@@ -301,7 +300,6 @@
                 </div>
             `;
 
-            // Hubungkan fungsi Like & Lightbox bawaan script.js
             if (typeof window.bindNewCardEvents === 'function') {
                 window.bindNewCardEvents(newCard);
             }
