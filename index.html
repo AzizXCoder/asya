@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Petualangan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="compass-icon">🧭</div>
+            <p class="preloader-text">Menyiapkan Jurnal Si Cantik...</p>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <button id="themeToggle" class="theme-toggle-btn" aria-label="Ubah Tema">🌓 Mode</button>
+
+    <header class="hero" id="parallax-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <span class="badge">⚠️ Kawasan Rawan Kangen Liburan</span>
+            <h1 class="main-title" id="typewriter-title"></h1>
+            <p class="subtitle">
+                Kumpulan tempat yang pernah aku datangi, lengkap dengan drama di balik layar dan isi pikiran random-ku
+            </p>
+        </div>
+    </header>
+
+    <main class="main-container">
+        
+        <div class="filter-container scroll-reveal">
+            <button class="filter-btn active" data-filter="all">✨ Semua Jejak</button>
+            <button class="filter-btn" data-filter="curug">🌊 Air Terjun</button>
+            <button class="filter-btn" data-filter="gunung">⛰️ Gunung</button>
+        </div>
+
+        <div class="grid-layout">
+            
+            <div class="cards-column">
+                <h2 class="section-title">Dokumentasi Jejak Kaki 🐾</h2>
+
+                <article class="card scroll-reveal" data-category="curug">
+                    <div class="card-image-wrapper">
+                        <img src="img/3440753447750463929-d.jpeg" alt="Curug Koja, Jabar" class="card-img clickable-img">
+                        <span class="card-location">📍 curug koja, jabar</span>
+                        <button class="like-btn" data-liked="false">
+                            <span class="heart-icon">❤️</span> <span class="like-count">12</span>
+                        </button>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="highlight-box">
+                            <span class="highlight-badge">HIGHLIGHT MENARIK 🌟</span>
+                            <p class="highlight-text">"Bentuk batuan berundaknya mirip kastil kuno"</p>
+                        </div>
+
+                        <h3 class="story-title">Behind The Scene 🎬</h3>
+                        <p class="story-text">
+                            "Bela-belain ke sini demi healing dari penatnya tugas dan jeritan dompet. Tapi pas nyampe bawah curug dan ngeliat medannya, aku malah sibuk nahan napas biar perut kelihatan rata pas difoto. Pulang-pulang bukan makin tenang, malah encok karena jarang olahraga tapi sok-sokan jadi anak alam."
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card scroll-reveal" data-category="gunung">
+                    <div class="card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=80" alt="Puncak Gunung Dingin, Jabar" class="card-img clickable-img">
+                        <span class="card-location">📍 Puncak Gunung Dingin, Jabar</span>
+                        <button class="like-btn" data-liked="false">
+                            <span class="heart-icon">❤️</span> <span class="like-count">24</span>
+                        </button>
+                    </div>
+                    
+                    <div class="card-content">
+                        <div class="highlight-box">
+                            <span class="highlight-badge">HIGHLIGHT MENARIK 🌟</span>
+                            <p class="highlight-text">"Suhu udara 14 derajat celcius, berhasil bikin idung aku merah-merah gemas ala cewek Korea."</p>
+                        </div>
+
+                        <h3 class="story-title">Behind The Scene 🎬</h3>
+                        <p class="story-text">
+                            Bela-belain bangun jam 3 pagi demi dapet sunrise. Pas nyampe atas, bukannya terharu liat pemandangan, aku malah sibuk nyari kang bajigur karena menggigil parah. Di foto ini aku kelihatan tersenyum anggun, padahal gigi bagian dalam lagi gemetaran bunyi *klek-klek-klek*.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="sidebar-column">
+                <h2 class="section-title">Isi Pikiran Random 🧠💭</h2>
+                
+                <div class="thought-box pop-box scroll-reveal">
+                    <div class="quote-mark">“</div>
+                    <p class="thought-text-content">
+                        "Kenapa ya kalau lagi traveling bawaannya pengen beli baju baru? Padahal isi lemari di rumah udah mau meledak. Dasar aku."
+                    </p>
+                    <span class="thought-meta">— Jam 2 malam, sambil scroll e-commerce</span>
+                </div>
+
+                <div class="thought-box white-box scroll-reveal">
+                    <p class="thought-text-content-small">
+                        Misteri terbesar abad ini: Kenapa mie instan yang dimasak di tempat wisata atau di atas gunung rasanya jauh lebih enak 5000x lipat dibanding masak sendiri di kostan? Apakah kuahnya dicampur air berkah petualangan?
+                    </p>
+                    <div class="thought-footer">
+                        <span>#PertanyaanHidup</span>
+                        <span>Baru Saja</span>
+                    </div>
+                </div>
+
+                <div class="interactive-box scroll-reveal">
+                    <h3>🔮 Mood Meter Hari Ini</h3>
+                    <p class="interactive-desc">Klik tombol di bawah buat tahu kamu lagi butuh liburan tipe apa sekarang!</p>
+                    <button id="moodBtn" class="action-btn">Cek Ramalan Liburan ✈️</button>
+                    <div id="moodResult" class="mood-result hidden"></div>
+                </div>
+
+                <div class="secret-message-box scroll-reveal">
+    <div class="envelope-badge">✉️ Secret Message</div>
+    <h3>Tinggalkan Pesan Random-mu!</h3>
+    <p class="secret-desc">Punya rekomendasi tempat seru atau mau sekadar nyapa? Tulis di bawah secara anonim!</p>
+    
+    <form action="https://formsubmit.co/aziznation123@gmail.com" method="POST" id="secretForm">
+        <input type="hidden" name="_next" value="window.location.href">
+        <input type="hidden" name="_captcha" value="false">
+        
+        <textarea name="Pesan Anonim" id="secretInput" placeholder="Tulis sesuatu yang manis di sini... 🌸" rows="3" required></textarea>
+        <button type="submit" id="sendSecretBtn" class="action-btn small-btn">Kirim Surat 🚀</button>
+    </form>
+    
+    <div id="secretSuccess" class="secret-status hidden">Pesanmu berhasil meluncur ke kotak rahasia! Teuteup anonim kok 😉💖</div>
+</div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="lightbox" class="lightbox-overlay hidden">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Jurnal Estetik Si Tuan Putri. Dibuat dengan cinta, kopi, dan skill koding tingkat dewa. ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
